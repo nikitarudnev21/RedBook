@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RedBook2.EditUser" BackgroundColor="IndianRed" Title="Предложить поправку">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="stack">
+                <Label Text="Название вида" TextColor="White" FontSize="Large" CharacterSpacing="0.55"
+                        x:Name="lblName" Margin="0,15,15,0"/>
+                <Entry Text="{Binding Name}" TextColor="White" FontSize="Large" CharacterSpacing="0.55"
+                         Margin="0,15,15,0" x:Name="entryName" />
+                <Label Text="Тип" TextColor="White" FontSize="Large" CharacterSpacing="0.55"
+                         Margin="0,15,15,0"/>
+                <Picker x:Name="typePicker" SelectedItem="{Binding Type}"
+                        TextColor="White" FontSize="Large" CharacterSpacing="0.55"  Margin="0,15,15,0" HorizontalOptions="FillAndExpand">
+                    <Picker.Items>
+                        <x:String>Животное</x:String>
+                        <x:String>Растение</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Количество осыбей" TextColor="White" FontSize="Large" CharacterSpacing="0.55"
+                         Margin="0,15,15,0"/>
+                <Entry  Text="{Binding Population}" TextColor="White" FontSize="Large"  CharacterSpacing="0.55"
+                         Margin="0,15,15,0" x:Name="entryPopulation"/>
+                <Label Text="Категория" TextColor="White" FontSize="Large" CharacterSpacing="0.55"
+                        Margin="0,15,15,0"/>
+                <Picker x:Name="categoryPicker" SelectedItem="{Binding Category}"
+                        TextColor="White" FontSize="Large" CharacterSpacing="0.55"  Margin="0,15,15,0" HorizontalOptions="FillAndExpand">
+                    <Picker.Items>
+                        <x:String>EX</x:String>
+                        <x:String>EW</x:String>
+                        <x:String>CR</x:String>
+                        <x:String>EN</x:String>
+                        <x:String>VU</x:String>
+                        <x:String>NT</x:String>
+                        <x:String>LC</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label  Text="Картинка" TextColor="White" FontSize="Large" 
+                        CharacterSpacing="0.55" LineHeight="1.1" 
+                        Margin="0,15,0,0"  HorizontalOptions="CenterAndExpand" FontAttributes="Bold" x:Name="lblImage"/>
+                <ImageButton Source="{Binding ViewImage}" Margin="0,15,15,0" x:Name="viewImg"></ImageButton>
+                <Label Text="Описание" TextColor="White" FontSize="Large" CharacterSpacing="0.55"
+                         Margin="0,15,15,0"/>
+                <Editor  Text="{Binding Description}" TextColor="White" FontSize="Medium"  Margin="0,15,15,0"
+                        CharacterSpacing="0.55" x:Name="entryDescription" />
+                <Button Text="Предложить поправку" CornerRadius="20" BackgroundColor="DarkRed" BorderColor="Red" BorderWidth="3"
+                        WidthRequest="300" TextColor="GhostWhite" x:Name="fix" Margin="0,20,10,0"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

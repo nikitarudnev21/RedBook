@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RedBook2.RecordView" BackgroundColor="IndianRed" Title="Информация о предложенной записи">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label  Text="{Binding Name}" TextColor="White" FontSize="Large" CharacterSpacing="0.55" LineHeight="1.1"
+                        x:Name="lblName" Margin="0,15,15,0"/>
+                <Label  Text="{Binding Type}" TextColor="White" FontSize="Large" CharacterSpacing="0.55" LineHeight="1.1"
+                        x:Name="lblType" Margin="0,15,15,0"/>
+                <Label  Text="{Binding Population}" TextColor="White" FontSize="Large"  CharacterSpacing="0.55" LineHeight="1.1"
+                        x:Name="lblThickness" Margin="0,15,15,0" />
+                <Label  Text="{Binding  Category}" TextColor="White" FontSize="Large" 
+                       CharacterSpacing="0.55" LineHeight="1.1"  x:Name="lblCategory" Margin="0,15,15,0"/>
+                <Label  Text="Картинка" TextColor="White" FontSize="Large" 
+                        CharacterSpacing="0.55" LineHeight="1.1" 
+                        Margin="0,15,0,0"  HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                <Image Source="{Binding ViewImage}" Margin="0,15,15,0" x:Name="imgView"></Image>
+                <Label  Text="Описание" TextColor="GhostWhite" FontAttributes="Bold" CharacterSpacing="0.55" LineHeight="1.1"
+                        FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+                <Label  Text="{Binding Description}" TextColor="White" FontSize="Medium" x:Name="lblDescription" Margin="0,15,15,0"
+                        CharacterSpacing="0.55" LineHeight="1.1"/>
+                <Button Text="Удалить запись" CornerRadius="20" BackgroundColor="DarkRed" BorderColor="Red" BorderWidth="3"
+                        WidthRequest="300" TextColor="GhostWhite" x:Name="delete"  Margin="0,20,10,0"></Button>
+                <Button Text="Добавить запись" CornerRadius="20" BackgroundColor="DarkRed" BorderColor="Red" BorderWidth="3"
+                        WidthRequest="300" TextColor="GhostWhite" x:Name="add"  Margin="0,20,10,0"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

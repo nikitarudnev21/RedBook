@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RedBook2.AdminLogin" BackgroundColor="IndianRed" Title="Вход в систему" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout x:Name="stack" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label  Text="Логин"  FontSize="Large" Grid.Row="0" Grid.ColumnSpan="3" TextColor="GhostWhite"/>
+            <Entry Text="{Binding Login}"  x:Name="entryLog" TextColor="White" WidthRequest="220"></Entry>
+            <Label  Text="Пароль" TextColor="WhiteSmoke"  FontSize="Large" />
+            <Entry  Text="{Binding Password}"  FontSize="Large" Grid.Row="3" Grid.ColumnSpan="3" x:Name="entryPass" TextColor="WhiteSmoke" IsPassword="True"/>
+            <Button Text="Войти" CornerRadius="20" BackgroundColor="DarkRed" BorderColor="Red" BorderWidth="3" 
+                        TextColor="WhiteSmoke" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

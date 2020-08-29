@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RedBook2.RecordList" Title="Выберите предложенную запись" BackgroundColor="IndianRed">
+    <ContentPage.Content>
+        <StackLayout x:Name="stack" BackgroundColor="IndianRed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label  Text="Тип вида" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="GhostWhite" FontAttributes="Bold" />
+                <Label  Text="Название вида"  FontSize="Large" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"  FontAttributes="Bold" 
+                                            TextColor="GhostWhite" HeightRequest="50"/>
+            </Grid>
+            <ListView x:Name="list" ItemsSource="{Binding}" ItemSelected="List_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label  Text="{Binding Type}" FontSize="Medium" Grid.Row="0" Grid.Column="0" TextColor="GhostWhite"  />
+                                    <Label  Text="{Binding Name}"  FontSize="Medium" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" TextColor="GhostWhite"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

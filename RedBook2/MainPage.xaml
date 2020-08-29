@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RedBook2.MainPage" Title="Красная книга" BackgroundColor="IndianRed">
+
+    <StackLayout VerticalOptions="CenterAndExpand" x:Name="stack" >
+
+        <Button x:Name="btnOffer"  Text="Предложить запись" Clicked="btnOffer_Clicked"  CornerRadius="20" BackgroundColor="DarkRed"
+                BorderWidth="3" BorderColor="Red" FontAttributes="Bold" TextColor="White" FontSize="Large"  WidthRequest="300"
+                HorizontalOptions="Center"/>
+        <Button x:Name="btnView"  Text="Смотреть записи"  Clicked="btnView_Clicked" CornerRadius="20" BackgroundColor="DarkRed"
+                BorderWidth="3" BorderColor="Red" FontAttributes="Bold" TextColor="White" FontSize="Large"  WidthRequest="300"
+                HorizontalOptions="Center"/>
+        <Button x:Name="btnLog"  Text="Войти в систему"   CornerRadius="20"  Clicked="btnLog_Clicked"
+                BackgroundColor="DarkRed"  BorderWidth="3" BorderColor="Red" FontAttributes="Bold"   WidthRequest="300"
+                TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
+        <Button x:Name="btnExit"  Text="Выход"   CornerRadius="20"  Clicked="btnExit_Clicked"
+                BackgroundColor="DarkRed" BorderWidth="3" BorderColor="Red" FontAttributes="Bold"   WidthRequest="300"
+                TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
+    </StackLayout>
+
+</ContentPage>

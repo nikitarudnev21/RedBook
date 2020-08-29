@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RedBook2.AdminPage" BackgroundColor="IndianRed" Title="Страница администратора">
+    <StackLayout VerticalOptions="CenterAndExpand" x:Name="stack">
+
+        <Button x:Name="btnAdd"  Text="Добавить запись"  Clicked="btnAdd_Clicked" CornerRadius="20" BackgroundColor="DarkRed"
+                BorderWidth="3" BorderColor="Red" FontAttributes="Bold" TextColor="White" FontSize="Large"  WidthRequest="300"
+                HorizontalOptions="Center"/>
+        <Button x:Name="btnView"  Text="Смотреть записи"  Clicked="btnView_Clicked" CornerRadius="20" BackgroundColor="DarkRed"
+                BorderWidth="3" BorderColor="Red" FontAttributes="Bold" TextColor="White" FontSize="Large"  WidthRequest="300"
+                HorizontalOptions="Center"/>
+        <Button x:Name="btnViewOffer"  Text="Смотреть предложенные поправки"  Clicked="btnViewOffer_Clicked" CornerRadius="20" BackgroundColor="DarkRed"
+                BorderWidth="3" BorderColor="Red" FontAttributes="Bold" TextColor="White" FontSize="Large"  WidthRequest="300"
+                HorizontalOptions="Center"/>
+        <Button x:Name="btnViewRecords" Clicked="btnViewRecords_Clicked"  Text="Смотреть преложенные записи" CornerRadius="20" BackgroundColor="DarkRed"
+                BorderWidth="3" BorderColor="Red" FontAttributes="Bold" TextColor="White" FontSize="Large"  WidthRequest="300"
+                HorizontalOptions="Center"/>
+        <Button x:Name="btnExit"  Text="Выйти из системы"   CornerRadius="20"  Clicked="btnExit_Clicked"
+                BackgroundColor="DarkRed" BorderWidth="3" BorderColor="Red" FontAttributes="Bold"   WidthRequest="300"
+                TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
+        <Button x:Name="btnMainPage"  Text="На главную страницу"   CornerRadius="20"  Clicked="btnMainPage_Clicked"
+                BackgroundColor="DarkRed" BorderWidth="3" BorderColor="Red" FontAttributes="Bold"   WidthRequest="300"
+                TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
